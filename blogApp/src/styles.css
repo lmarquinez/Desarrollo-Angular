@@ -2,11 +2,68 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     color: #333;
-    box-sizing: content-box;
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* NOTICIAS */
+.articles {
+    padding: 10px;
+    flex-basis: 50%;
+}
+
+.news-list-title {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0a172c;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: ;
+}
+
+.news-title {
+    font-size: 1em;
+    padding: 10px 0px;
+}
+
+.news-image {
+    margin-bottom: 12px;
+    max-width: 100%;
+    height: 150px;
+}
+
+.news-content {
+    margin-top: 12px;
+    border: 1px solid #464a51;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.news-date {
+    padding: 10px 0px;
+}
+
+/* Setting the image to be 200px wide and 150px high. */
