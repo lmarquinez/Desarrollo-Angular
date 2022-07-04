@@ -24,8 +24,8 @@ export class BlogComponent implements OnInit {
   constructor() {
     /* It's creating an array of objects. */
     this.arrNews = [
-      { id: 1, title: 'El Deportivo Alavés regresa a Primera División en San Mamés frente al Athletic (4-0)', image: "https://www.manquepierda.com/historiarealbetis/files/2018/08/Alav%C3%A9s-2016-17-400x200.jpg", content: 'Veintiún años, cinco meses y diecisiete días después de su primer descenso a Segunda -26 de marzo de 1933-, el Deportivo Alavés regresa a la máxima categoría futbolística estatal: Primera División. Lo hace en un campo mítico: San Mamés. Frente a un rival histórico: Athletic. ¡El Glorioso ha vuelto!', date: '16/05/2016' },
-      { id: 2, title: 'El Alavés solicitará nueve años y medio de prisión para Dimitry Piterman y José Nereo', image: "https://imagenes.elpais.com/resizer/01RdFghZcxDSp9_mZ5FT6CJkxl4=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/WHEW2CJKKM5E56WHF3AQVWWAFM.jpg", content: 'El Deportivo Alavés anunció este miércoles que solicitará en total nueve años y medio de prisión para Dimitry Piterman y José Nereo Ruiz Vicente por "la presunta comisión de delito continuado de apropiación indebida, falsedad contable y delito societario" durante su etapa en el club vitoriano entre 2004 y 2007.', date: '29/06/2022' }
+      { id: 2, title: 'El Alavés solicitará nueve años y medio de prisión para Dimitry Piterman y José Nereo', image: "https://imagenes.elpais.com/resizer/01RdFghZcxDSp9_mZ5FT6CJkxl4=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/WHEW2CJKKM5E56WHF3AQVWWAFM.jpg", content: 'El Deportivo Alavés anunció este miércoles que solicitará en total nueve años y medio de prisión para Dimitry Piterman y José Nereo Ruiz Vicente por "la presunta comisión de delito continuado de apropiación indebida, falsedad contable y delito societario" durante su etapa en el club vitoriano entre 2004 y 2007.', date: '29/06/2022' },
+      { id: 1, title: 'El Deportivo Alavés regresa a Primera División en San Mamés frente al Athletic (4-0)', image: "https://www.manquepierda.com/historiarealbetis/files/2018/08/Alav%C3%A9s-2016-17-400x200.jpg", content: 'Veintiún años, cinco meses y diecisiete días después de su primer descenso a Segunda -26 de marzo de 1933-, el Deportivo Alavés regresa a la máxima categoría futbolística estatal: Primera División. Lo hace en un campo mítico: San Mamés. Frente a un rival histórico: Athletic. ¡El Glorioso ha vuelto!', date: '16/05/2016' }
     ]
   }
 
@@ -34,6 +34,7 @@ export class BlogComponent implements OnInit {
    */
   ngOnInit(): void {
     this.drawNews();
+    console.log(this.arrNews);
   }
 
   /* It's checking if the fields are empty and if they are not, it's adding the news to the array. */
@@ -49,7 +50,7 @@ export class BlogComponent implements OnInit {
           content: this.n_content,
           date: this.n_date
         }
-        this.arrNews.push(newNews);
+        this.arrNews.unshift(newNews);
         this.id++;
         this.drawNews();
         this.n_title = "";
